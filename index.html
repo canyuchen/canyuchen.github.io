@@ -36,6 +36,54 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style id="pub-teaser-style">
+        .pub-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 2px;
+            align-items: flex-start;
+        }
+        .pub-teaser {
+            flex-shrink: 0;
+            width: 220px;
+        }
+        .pub-teaser img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        .pub-text {
+            flex: 1;
+            min-width: 0;
+        }
+        .pub-text p {
+            margin: 0;
+        }
+        #publications ~ ul > li,
+        #publications ~ h3 + ul > li {
+            list-style: none;
+        }
+        #publications ~ h3 + ul > li {
+            margin-bottom: 18px;
+        }
+        #publications ~ ul {
+            padding-left: 0;
+        }
+        .wrapper, .masthead__inner-wrap {
+            max-width: 1280px;
+        }
+        .page {
+            padding-right: 4% !important;
+        }
+        .page__content {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .pub-row { flex-direction: column; }
+            .pub-teaser { width: 100%; max-width: 300px; }
+        }
+    </style>
 </head>
 
 <body>
@@ -252,29 +300,36 @@
                         <li>[09/2023] New preprint is online <a href="https://arxiv.org/abs/2309.13788">Can LLM-Generated Misinformation Be Detected?</a>, <a href="https://llm-misinformation.github.io/">[project website]</a>. The dataset and code are released <a href="https://github.com/llm-misinformation/llm-misinformation/">[dataset and
                             code]</a>.</li>
                     </ul> -->
-                    <h2 id="publications">Publications</h2>
+                    <h2 id="publications">Publications <span style="font-size:16px; font-weight:normal; margin-left:8px;">(<a href="#" id="pub-show-selected" style="font-weight:bold; color:#52adc8;">show selected</a> / <a href="#" id="pub-show-all" style="color:#999;">show by date</a>)</span></h2>
+                    <p style="font-size:14px; color:#666;">(* indicates equal contributions)</p>
 
                     <h3 id="2025">2026</h3>
                     <ul>
 
-                    <li>
-                        <p><strong><a href="https://drive.google.com/file/d/16cZQ-26NXLsy1ZkrJNfWNYSyI5jLHfru/view" style="text-decoration:none"><font color="#494e52">Federated Agent Reinforcement Learning</font></a></strong>
-                            <br /><b>Canyu Chen</b>*, <a href="https://scholar.google.com/citations?user=55J-zgwAAAAJ&hl=en">Kangyu Zhu</a>*, <a href="https://billchan226.github.io/">Zhaorun Chen</a>, <a href="https://scholar.google.com/citations?user=SbACfYQAAAAJ">Zhanhui Zhou</a>, <a href="https://shizhediao.github.io/">Shizhe Diao</a>, <a href="https://2prime.github.io/">Yiping Lu</a>, <a href="https://litian96.github.io/">Tian Li</a>, <a href="https://limanling.github.io/">Manling Li</a>, <a href="https://dawnsong.io/">Dawn Song</a> (*equal contributions)
-                            <br /> Presented in 
-                            <em> AAAI 2026 Workshop on Trust and Control in Agentic AI ( <strong><a href="https://trustagenticai.github.io/AAAI2026/" style="text-decoration:none"><font color="#494e52">TrustAgent@AAAI 2026</font></a></strong>, <b><font color="red">Oral</font></b> )</em> and 
-                            <em> AAAI 2026 Workshop on Personalization in the Era of Large Foundation Models ( <strong><a href="https://personalizedllm.github.io/events/perfm-aaai26/" style="text-decoration:none"><font color="#494e52">PerFM@AAAI 2026</font></a></strong>, <b><font color="red">Oral</font></b> )</em>.
+                    <li data-selected="true">
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Federated%20Agent%20Reinforcement%20Learning.png" alt="Federated Agent Reinforcement Learning teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://drive.google.com/file/d/16cZQ-26NXLsy1ZkrJNfWNYSyI5jLHfru/view" style="text-decoration:none"><font color="#494e52">Federated Agent Reinforcement Learning</font></a></strong>
+                            <br /><b>Canyu Chen</b>*, <a href="https://scholar.google.com/citations?user=55J-zgwAAAAJ&hl=en">Kangyu Zhu</a>*, <a href="https://billchan226.github.io/">Zhaorun Chen</a>, <a href="https://scholar.google.com/citations?user=SbACfYQAAAAJ">Zhanhui Zhou</a>, <a href="https://shizhediao.github.io/">Shizhe Diao</a>, <a href="https://2prime.github.io/">Yiping Lu</a>, <a href="https://litian96.github.io/">Tian Li</a>, <a href="https://limanling.github.io/">Manling Li</a>, <a href="https://dawnsong.io/">Dawn Song</a>                            <br /><em><strong><a href="https://trustagenticai.github.io/AAAI2026/" style="text-decoration:none"><font color="#494e52">TrustAgent@AAAI 2026</font></a></strong>, <b><font color="red">Oral</font></b></em> · <em><strong><a href="https://personalizedllm.github.io/events/perfm-aaai26/" style="text-decoration:none"><font color="#494e52">PerFM@AAAI 2026</font></a></strong>, <b><font color="red">Oral</font></b></em>
                             <br /> <a href="https://drive.google.com/file/d/16cZQ-26NXLsy1ZkrJNfWNYSyI5jLHfru/view">[PDF]</a>
                             <br /> 🏆 <a href="https://drive.google.com/file/d/1S13-8c382w8urNDCLwli1PNdc3ABnW1H/view?usp=sharing" style="text-decoration:none"><strong><font color="red">Award: Best Paper Award</font></a> </strong> in the <em><a href="https://trustagenticai.github.io/AAAI2026/" style="text-decoration:none"><font color="#494e52">AAAI 2026 Workshop on Trust and Control in Agentic AI</font></a></em>
                             <br /> 🏆 <a href="https://drive.google.com/file/d/1Z1x_cvT2I6aFdsF0ai25ZksLRcQ_VLMo/view?usp=sharing" style="text-decoration:none"><strong><font color="red">Award: Outstanding Paper Award</font></a> </strong> in the <em><a href="https://personalizedllm.github.io/events/perfm-aaai26/" style="text-decoration:none"><font color="#494e52">AAAI 2026 Workshop on Personalization in the Era of Large Foundation Models</font></a></em>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
-                    <li>
-                        <p><strong><a href="https://arxiv.org/abs/2407.20224" style="text-decoration:none"><font color="#494e52">Can Editing LLMs Inject Harm?</font></a></strong>
-                            <br /><b>Canyu Chen</b>*, <a href="https://baixianghuang.github.io/">Baixiang Huang</a>*, <a href="https://scholar.google.com/citations?user=MD61m08AAAAJ&hl=en">Zekun Li</a>, <a href="https://billchan226.github.io/">Zhaorun Chen</a>, <a href="https://scholar.google.com/citations?user=qALDmfcAAAAJ&hl=en">Shiyang Lai</a>, <a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>, <a href="https://jasonforjoy.github.io/">Jia-Chen Gu</a>, <a href="https://jindonggu.github.io/">Jindong Gu</a>, <a href="https://www.huaxiuyao.io/">Huaxiu Yao</a>, <a href="https://xiaocw11.github.io/">Chaowei Xiao</a>, <a href="https://sites.cs.ucsb.edu/~xyan/">Xifeng Yan</a>, <a href="https://sites.cs.ucsb.edu/~william/">William Yang Wang</a>, <a href="https://www.robots.ox.ac.uk/~phst/">Philip Torr</a>, <a href="https://dawnsong.io/">Dawn Song</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a> (*equal contributions)
-                            <br />Published in <em>Proceedings of The 40th Annual AAAI Conference on Artificial Intelligence
-                                 ( <strong><font color="#494e52">AAAI 2026</font></strong> )</em>
-                            <br /> Presented in workshop  <em><strong><a href="https://icml-tifa.github.io/" style="text-decoration:none"><font color="#494e52">TiFA@ICML 2024</font></a>, <font color="red">Lightning Talk</font></strong></em> and <em><strong><a href="https://icml-nextgenaisafety.github.io/" style="text-decoration:none"><font color="#494e52">NextGenAISafety@ICML 2024</font></a></strong></em>.
+                    <li data-selected="true">
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Can%20Editing%20LLMs%20Inject%20Harm%3F.png" alt="Can Editing LLMs Inject Harm? teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2407.20224" style="text-decoration:none"><font color="#494e52">Can Editing LLMs Inject Harm?</font></a></strong>
+                            <br /><b>Canyu Chen</b>*, <a href="https://baixianghuang.github.io/">Baixiang Huang</a>*, <a href="https://scholar.google.com/citations?user=MD61m08AAAAJ&hl=en">Zekun Li</a>, <a href="https://billchan226.github.io/">Zhaorun Chen</a>, <a href="https://scholar.google.com/citations?user=qALDmfcAAAAJ&hl=en">Shiyang Lai</a>, <a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>, <a href="https://jasonforjoy.github.io/">Jia-Chen Gu</a>, <a href="https://jindonggu.github.io/">Jindong Gu</a>, <a href="https://www.huaxiuyao.io/">Huaxiu Yao</a>, <a href="https://xiaocw11.github.io/">Chaowei Xiao</a>, <a href="https://sites.cs.ucsb.edu/~xyan/">Xifeng Yan</a>, <a href="https://sites.cs.ucsb.edu/~william/">William Yang Wang</a>, <a href="https://www.robots.ox.ac.uk/~phst/">Philip Torr</a>, <a href="https://dawnsong.io/">Dawn Song</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>                            <br /><em><strong><font color="#494e52">AAAI 2026</font></strong></em> · <em><strong><a href="https://icml-tifa.github.io/" style="text-decoration:none"><font color="#494e52">TiFA@ICML 2024</font></a>, <font color="red">Lightning Talk</font></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2407.20224">[arXiv]</a>
                             <a href="https://llm-editing.github.io/">[project website]</a>
                             <a href="https://drive.google.com/file/d/1pUkoDYDxeWl4nhCy74jaDIhxBW7_Sy4g/view?usp=sharing">[poster]</a>
@@ -289,22 +344,36 @@
                             </strong> : 
                             <a href="https://drive.google.com/file/d/1sg3Dy3gQo2bwOoLwWMFh57NfHROf3Ahg/view?usp=sharing">[Knowledge Editing for Large Language Models@IJCAI 2024]</a>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
 
-                    <li>
-                        <p><strong><a href="https://arxiv.org/abs/2601.06788" style="text-decoration:none"><font color="#494e52"> Artificial Entanglement in the Fine-Tuning of Large Language Models</font></a></strong>
+                    <li data-selected="true">
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Artificial%20Entanglement%20in%20the%20Fine-Tuning%20of%20Large%20Language%20Models.png" alt="Artificial Entanglement in the Fine-Tuning of Large Language Models teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2601.06788" style="text-decoration:none"><font color="#494e52"> Artificial Entanglement in the Fine-Tuning of Large Language Models</font></a></strong>
                             <br />Min Chen, <a href="https://zihanwang314.github.io/">Zihan Wang</a>, <b>Canyu Chen</b>, Zeguan Wu, <a href="https://limanling.github.io/">Manling Li</a>, <a href="https://sites.google.com/view/junyuliu/main">Junyu Liu</a>
                             <br /> <a href="https://arxiv.org/abs/2601.06788">[arxiv]</a>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     </ul>
                     <h3 id="2025">2025</h3>
                     <ul>
 
                     <!-- <li>
-                        <p><strong><a href="https://drive.google.com/file/d/16cZQ-26NXLsy1ZkrJNfWNYSyI5jLHfru/view?usp=sharing" style="text-decoration:none"><font color="#494e52">Federated Agent Reinforcement Learning</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Federated%20Agent%20Reinforcement%20Learning.png" alt="Federated Agent Reinforcement Learning teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://drive.google.com/file/d/16cZQ-26NXLsy1ZkrJNfWNYSyI5jLHfru/view?usp=sharing" style="text-decoration:none"><font color="#494e52">Federated Agent Reinforcement Learning</font></a></strong>
                             <br /><b>Canyu Chen</b>*, Kangyu Zhu*, Zhaorun Chen, Zhanhui Zhou, 
                             Shizhe Diao, Yiping Lu, Tian Li, Manling Li, Dawn Song
                             (*equal contributions) -->
@@ -316,21 +385,30 @@
                                 <font color="red">🏆 Award:</font> <a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="red">Top #2 Paper of the day</font></a>
                             </strong> at <em><b><a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="#494e52">HuggingFace AK Daily Papers (Oct.25, 2024)</font></a></b>.</em> -->
                         <!-- </p>
-                    </li> -->
+                            </div>
+                        </div>
+</li> -->
 
                     <li>
-                        <p><strong><a href="https://fish-sorrel-a54.notion.site/Reflection-on-Knowledge-Editing-Charting-the-Next-Steps-1e6ca8e41f3a8098bd14c85ac1db8da6" style="text-decoration:none"><font color="#494e52">Reflection on Knowledge Editing: Charting the Next Steps</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser"></div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://fish-sorrel-a54.notion.site/Reflection-on-Knowledge-Editing-Charting-the-Next-Steps-1e6ca8e41f3a8098bd14c85ac1db8da6" style="text-decoration:none"><font color="#494e52">Reflection on Knowledge Editing: Charting the Next Steps</font></a></strong>
                             <br />Yunzhi Yao, <b>Canyu Chen</b>, Jia-Chen Gu, Shumin Deng, Manling Li, Nanyun Peng
                             <br /> <a href="https://fish-sorrel-a54.notion.site/Reflection-on-Knowledge-Editing-Charting-the-Next-Steps-1e6ca8e41f3a8098bd14c85ac1db8da6">[blog]</a>
                         </p>
+                            </div>
+                        </div>
                     </li>
 
-                    <li>
-                        <p><strong><a href="https://arxiv.org/abs/2410.16251" style="text-decoration:none"><font color="#494e52">Can Knowledge Editing Really Correct Hallucinations?</font></a></strong>
-                            <br /><a href="https://baixianghuang.github.io/">Baixiang Huang</a>*, <b>Canyu Chen</b>*, <a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>,  <a href="https://scholar.google.com/citations?hl=en&user=9rHwD8wAAAAJ&view_op=list_works">Ali Payani</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a> (*equal contributions)
-                            <br />Published in <em>Proceedings of The Thirteenth International Conference on Learning Representations (<strong>
-                                <font color="#494e52">ICLR 2025</font></strong> )</em>
-                            <br /> Also presented in workshop  <em><strong><a href="https://safegenaiworkshop.github.io/" style="text-decoration:none"><font color="#494e52">Safe Generative AI@NeurIPS 2024</font></a></strong></em>.
+                    <li data-selected="true">
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Can%20Knowledge%20Editing%20Really%20Correct%20Hallucinations%3F.png" alt="Can Knowledge Editing Really Correct Hallucinations? teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2410.16251" style="text-decoration:none"><font color="#494e52">Can Knowledge Editing Really Correct Hallucinations?</font></a></strong>
+                            <br /><a href="https://baixianghuang.github.io/">Baixiang Huang</a>*, <b>Canyu Chen</b>*, <a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>,  <a href="https://scholar.google.com/citations?hl=en&user=9rHwD8wAAAAJ&view_op=list_works">Ali Payani</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>                            <br /><em><strong><font color="#494e52">ICLR 2025</font></strong></em> · <em><strong><a href="https://safegenaiworkshop.github.io/" style="text-decoration:none"><font color="#494e52">Safe Generative AI@NeurIPS 2024</font></a></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2410.16251">[arXiv]</a>
                             <a href="https://llm-editing.github.io/">[project website]</a> 
                             <a href="https://github.com/llm-editing/HalluEditBench">[Code and results on GitHub]</a>
@@ -338,14 +416,19 @@
                                 <font color="red">🏆 Award:</font> <a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="red">Top #2 Paper of the day</font></a>
                             </strong> at <em><b><a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="#494e52">HuggingFace AK Daily Papers (Oct.25, 2024)</font></a></b>.</em>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://arxiv.org/abs/2407.04842" style="text-decoration:none"><font color="#494e52">MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Is%20Your%20Multimodal%20Reward%20Model%20Really%20a%20Good%20Judge%20for%20Text-to-Image%20Generation%3F.png" alt="MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation? teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2407.04842" style="text-decoration:none"><font color="#494e52">MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</font></a></strong>
                             <br />Zhaorun Chen, Yichao Du, Zichen Wen, Yiyang Zhou, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, <strong>Canyu Chen</strong>, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
-                            <br />Published in <em> Proceedings of the 39th Conference on Neural Information Processing Systems (<strong>
-                                <font color="#494e52">NeurIPS 2025</font></strong> ), Datasets and Benchmarks Track</em>
-                            <br /> Also presented in workshop  <em><strong><a href="https://icml-fm-wild.github.io/" style="text-decoration:none"><font color="#494e52">FM-Wild@ICML 2024</font></a></strong></em>.
+                            <br /><em><strong><font color="#494e52">NeurIPS 2025</font></strong>, Datasets and Benchmarks Track</em> · <em><strong><a href="https://icml-fm-wild.github.io/" style="text-decoration:none"><font color="#494e52">FM-Wild@ICML 2024</font></a></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2407.04842">[arXiv]</a>
                             <a href="https://mj-bench.github.io/">[project website]</a>
                             <a href="https://github.com/MJ-Bench/MJ-Bench">[Code]</a>
@@ -354,14 +437,20 @@
                                 <font color="red">🏆 Award:</font> <a href="https://huggingface.co/papers/date/2024-07-09" style="text-decoration:none"><font color="red">Top #1 Paper of the day</font></a>
                             </strong> at <em><b><a href="https://huggingface.co/papers/date/2024-07-09" style="text-decoration:none"><font color="#494e52">HuggingFace AK Daily Papers (Jul.9, 2024)</font></a></b>.</em>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
 
                     <li>
-                        <p><strong><a href="https://arxiv.org/abs/2411.16594" style="text-decoration:none"><font color="#494e52">From Generation to Judgment: Opportunities and Challenges of LLM-as-a-judge</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/From%20Generation%20to%20Judgment.png" alt="From Generation to Judgment: Opportunities and Challenges of LLM-as-a-judge teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2411.16594" style="text-decoration:none"><font color="#494e52">From Generation to Judgment: Opportunities and Challenges of LLM-as-a-judge</font></a></strong>
                             <br />Dawei Li, Bohan Jiang, Liangjie Huang, Alimohammad Beigi, Chengshuai Zhao, Zhen Tan, Amrita Bhattacharjee, Yuxuan Jiang, <strong>Canyu Chen</strong>, Tianhao Wu, Kai Shu, Lu Cheng, Huan Liu
-                            <br /> Published in <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (<strong>
-                                <font color="#494e52">EMNLP 2025</font></strong>, Main Conference Long Paper )</em>
+                            <br /><em><strong><font color="#494e52">EMNLP 2025</font></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2411.16594">[arXiv]</a>
                             <a href="https://llm-as-a-judge.github.io/">[project website]</a>
                             <a href="https://github.com/llm-as-a-judge/Awesome-LLM-as-a-judge">[Paper List on GitHub]</a>
@@ -373,29 +462,49 @@
                             </strong> : 
                             <a href="https://www.jiqizhixin.com/articles/2024-12-03-5">[机器之心]</a> 
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://www.nature.com/articles/s44401-025-00015-6" style="text-decoration:none"><font color="#494e52">Explainable differential diagnosis with dual-inference large language models</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Explainable%20differential%20diagnosis%20with%20dual-inference%20large%20language%20models.png" alt="Explainable differential diagnosis with dual-inference large language models teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://www.nature.com/articles/s44401-025-00015-6" style="text-decoration:none"><font color="#494e52">Explainable differential diagnosis with dual-inference large language models</font></a></strong>
                             <br />Shuang Zhou, Mingquan Lin, Sirui Ding, Jiashuo Wang, <strong>Canyu Chen</strong>, Genevieve B Melton, James Zou, Rui Zhang
-                            <br />Published in <strong><em><font color="#494e52">npj Health Systems (2025 April)</font></em></strong>
+                            <br /><strong><em><font color="#494e52">npj Health Systems, 2025</font></em></strong>
                             <br /> <a href="https://www.nature.com/articles/s44401-025-00015-6">[publication]</a>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://arxiv.org/abs/2502.13233" style="text-decoration:none"><font color="#494e52">SearchRAG: Can Search Engines Be Helpful for LLM-based Medical Question Answering?</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/SearchRAG.png" alt="SearchRAG: Can Search Engines Be Helpful for LLM-based Medical Question Answering? teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2502.13233" style="text-decoration:none"><font color="#494e52">SearchRAG: Can Search Engines Be Helpful for LLM-based Medical Question Answering?</font></a></strong>
                             <br /><a href="https://sycny.github.io/">Yucheng Shi</a>, Tianze Yang, <strong>Canyu Chen</strong>, <a href="https://scholar.google.com/citations?user=MHq2z7oAAAAJ&hl=en">Quanzheng Li</a>, <a href="https://cobweb.cs.uga.edu/~tliu/">Tianming Liu</a>, <a href="https://xiangli-shaun.github.io/">Xiang Li</a>, <a href="https://cobweb.cs.uga.edu/~ninghaoliu/">Ninghao Liu</a>
-                            <br /> Published in <em>Proceedings of The IEEE International Conference on Bioinformatics and Biomedicine (<strong>
-                                <font color="#494e52">BIBM 2025</font></strong> )</em>
+                            <br /><em><strong><font color="#494e52">BIBM 2025</font></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2502.13233">[arXiv]</a>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://academic.oup.com/edited-volume/59908/chapter-abstract/544536706" style="text-decoration:none"><font color="#494e52">Evaluating the Social Impact of Generative AI Systems</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/Evaluating%20the%20Social%20Impact%20of%20Generative%20AI%20Systems%20in%20Systems%20and%20Society.png" alt="Evaluating the Social Impact of Generative AI Systems teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://academic.oup.com/edited-volume/59908/chapter-abstract/544536706" style="text-decoration:none"><font color="#494e52">Evaluating the Social Impact of Generative AI Systems</font></a></strong>
                             <br />Irene Solaiman, Zeerak Talat, William Agnew, Lama Ahmad, Dylan Baker, Su Lin Blodgett, <strong>Canyu Chen</strong>, Hal Daumé III, Jesse Dodge, Isabella Duan, Ellie Evans, Felix Friedrich, Avijit Ghosh, Usman Gohar, Sara Hooker, Yacine Jernite, Ria Kalluri, Alberto Lusoli, Alina Leidinger, Michelle Lin, Xiuzhu Lin, Sasha Luccioni, Jennifer Mickel, Margaret Mitchell, Jessica Newman, Anaelia Ovalle, Marie-Therese Png, Shubham Singh, Andrew Strait, Lukas Struppek, Arjun Subramonian
-                            <br />Published in <strong><em><font color="#494e52">Oxford Handbook on the Foundations and Regulation of Generative AI</font></em></strong>. Oxford University Press. Dec. 2025.
+                            <br /><strong><em><font color="#494e52">Oxford Handbook on the Foundations and Regulation of Generative AI</font></em></strong>, 2025
                             <br /> 
                             <a href="https://academic.oup.com/edited-volume/59908/chapter-abstract/544536706">[Publication]</a>
                             <a href="https://www.researchgate.net/publication/381796100_Evaluating_the_Social_Impact_of_Generative_AI_Systems_in_Systems_and_Society">[researchgate]</a>
@@ -417,10 +526,17 @@
                             <a href="https://siliconangle.com/2024/04/16/mlcommons-announces-first-benchmark-assessing-ai-safety/">[SiliconANGLE]</a>
                             <a href="https://goatstack.ai/topics/introducing-v0-5-of-the-ai-safety-benchmark-from-mlcommons-vhqogz">[GoatStack.ai]</a>. -->
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://arxiv.org/abs/2503.05731" style="text-decoration:none"><font color="#494e52">AILuminate: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/AILuminate.png" alt="AILuminate: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2503.05731" style="text-decoration:none"><font color="#494e52">AILuminate: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons</font></a></strong>
                             <br /> MLCommons AI Safety Working Group
                             <br /> arXiv preprint. Feb. 2025.
                             <br /> <a href="https://arxiv.org/abs/2503.05731">[arXiv]</a>
@@ -440,10 +556,17 @@
                             <a href="https://www.aiwire.net/2024/12/05/shining-a-light-on-ai-risks-inside-mlcommons-ailuminate-benchmark/">[AIwire]</a>
                             <a href="https://www.kmworld.com/Articles/News/News/MLCommons-introduces-AILuminate-an-important-benchmark-to-measure-the-safety-of-LLMs-167178.aspx">[KMWorld]</a>
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     <li>
-                        <p><strong><a href="https://arxiv.org/abs/2404.14757" style="text-decoration:none"><font color="#494e52">SST: Multi-Scale Hybrid Mamba-Transformer Experts for Long-Short Range Time Series Forecasting</font></a></strong>
+                        <div class="pub-row">
+                            <div class="pub-teaser">
+                                <img loading="lazy" src="images/teasers/SST.png" alt="SST: Multi-Scale Hybrid Mamba-Transformer Experts for Long-Short Range Time Series Forecasting teaser">
+                            </div>
+                            <div class="pub-text">
+                                <p><strong><a href="https://arxiv.org/abs/2404.14757" style="text-decoration:none"><font color="#494e52">SST: Multi-Scale Hybrid Mamba-Transformer Experts for Long-Short Range Time Series Forecasting</font></a></strong>
                             <br /><a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>,
                             <strong>Canyu Chen</strong>,
                             <a href="https://yueqingliang1.github.io/">Yueqing Liang</a>,
@@ -451,12 +574,13 @@
                             <a href="https://baithebest.github.io/">Guangji Bai</a>,
                             <a href="https://cs.emory.edu/~lzhao41/">Liang Zhao</a>,
                             <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                            <br /> Published in <em>Proceedings of the 34th ACM International Conference on Information and Knowledge Management (<strong>
-                                <font color="#494e52">CIKM 2025</font></strong> )</em>
+                            <br /><em><strong><font color="#494e52">CIKM 2025</font></strong></em>
                             <br /> <a href="https://arxiv.org/abs/2404.14757">[arXiv]</a>
                             <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2305.10668'></span> -->
                         </p>
-                    </li>
+                            </div>
+                        </div>
+</li>
 
                     </ul>
 
@@ -464,12 +588,14 @@
                     <h3 id="2024">2024</h3>
                     <ul>
 
-                        <li>
-                            <p><strong><a href="https://arxiv.org/abs/2411.06469" style="text-decoration:none"><font color="#494e52">ClinicalBench: Can LLMs Beat Traditional ML Models in Clinical Prediction?</font></a></strong>
-                                <br /><b>Canyu Chen</b>*, Jian Yu*,  <a href="https://shanchen.dev/">Shan Chen</a>, <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=HED_458AAAAJ&sortby=pubdate">Che Liu</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=EVj1cNoAAAAJ&view_op=list_works">Zhongwei Wan</a>, <a href="https://www.bittermanlab.org/">Danielle S. Bitterman</a>, <a href="https://wcm-wanglab.github.io/">Fei Wang</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a> (*equal contributions)
-                                <br /> Presented in <em><strong><a href="https://pittnail.github.io/AMIANLP2024/" style="text-decoration:none"><font color="#494e52">AMIA NLP Working Group Pre-Symposium 2024</font></a></strong>, <b>
-                                    <font color="red">Oral</font>
-                                </b></em>  and workshop  <em><strong><a href="https://genai4health.github.io" style="text-decoration:none"><font color="#494e52">GenAI4Health@NeurIPS 2024</font></a></strong></em>.
+                        <li data-selected="true">
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/ClinicalBench.png" alt="ClinicalBench: Can LLMs Beat Traditional ML Models in Clinical Prediction? teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2411.06469" style="text-decoration:none"><font color="#494e52">ClinicalBench: Can LLMs Beat Traditional ML Models in Clinical Prediction?</font></a></strong>
+                                <br /><b>Canyu Chen</b>*, Jian Yu*,  <a href="https://shanchen.dev/">Shan Chen</a>, <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=HED_458AAAAJ&sortby=pubdate">Che Liu</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=EVj1cNoAAAAJ&view_op=list_works">Zhongwei Wan</a>, <a href="https://www.bittermanlab.org/">Danielle S. Bitterman</a>, <a href="https://wcm-wanglab.github.io/">Fei Wang</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>                                <br /><em><strong><a href="https://pittnail.github.io/AMIANLP2024/" style="text-decoration:none"><font color="#494e52">AMIA NLP 2024</font></a></strong>, <b><font color="red">Oral</font></b></em> · <em><strong><a href="https://genai4health.github.io" style="text-decoration:none"><font color="#494e52">GenAI4Health@NeurIPS 2024</font></a></strong></em>
                                 <br /> <a href="https://arxiv.org/abs/2411.06469">[arxiv]</a>
                                 <a href="https://clinicalbench.github.io/">[project website]</a> 
                                 <a href="https://github.com/canyuchen/ClinicalBench">[Code and results on GitHub]</a>
@@ -486,23 +612,18 @@
                                     <font color="red">🏆 Award:</font> <a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="red">Top #2 Paper of the day</font></a>
                                 </strong> at <em><b><a href="https://huggingface.co/papers/date/2024-10-25" style="text-decoration:none"><font color="#494e52">HuggingFace AK Daily Papers (Oct.25, 2024)</font></a></b>.</em> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
-                        <li>
-                            <p><strong><a href="https://arxiv.org/abs/2402.04559" style="text-decoration:none"><font color="#494e52">Can Large Language Model Agents Simulate Human Trust Behavior?</font></a></strong>
-                                <br /> <a href="https://yitianlian.github.io/">Chengxing Xie</a>*, <strong>Canyu Chen</strong>*, <a href="https://feiran.io/">Feiran Jia</a>, <a href="https://ziyu-deep.github.io/">Ziyu Ye</a>,  <a href="https://scholar.google.com/citations?user=qALDmfcAAAAJ&hl=en">Shiyang Lai</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>, <a href="https://jindonggu.github.io/">Jindong Gu</a>, <a href="https://www.adelbibi.com/">Adel Bibi</a>, <a href="https://acbull.github.io/">Ziniu Hu</a>, <a href="http://jurgens.people.si.umich.edu/">David Jurgens</a>, <a href="https://macss.uchicago.edu/directory/James-Evans">James Evans</a>, <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a>, <a href="https://www.bernardghanem.com/">Bernard Ghanem</a>, <a href="https://ghli.org/">Guohao Li</a>. (*equal contributions)
-                                <br />Published in <em> Proceedings of the 38th Conference on Neural Information Processing Systems (<strong>
-                                    <font color="#494e52">NeurIPS 2024</font></strong> )</em>
-                                <br /> Also presented in 
-                                     <em> The 1st Workshop on LLM Agents for Social Simulation ( <strong><a href="https://lass-workshop.github.io/" style="text-decoration:none"><font color="#494e52">LASS@CIKM 2025</font></a></strong>, <b><font color="red">Oral</font></b> )</em>,
-                               <!-- <em><b><a href="" style="text-decoration:none"><font color="#494e52">LASS@CIKM 2025, <b><font color="red">Oral</font></b>)</font></a></b></em> -->
-                                <!-- workshop <em> <strong><a href="https://agiworkshop.github.io/" style="text-decoration:none"><font color="#494e52">AGI@ICLR 2024</font></a></strong> </em> and <em> <strong><a href="https://sites.google.com/site/nlpandcss/nlp-css-at-naacl-2024" style="text-decoration:none"><font color="#494e52">NLP+CSS@NAACL 2024</font></a></strong> </em>, -->
-                                     <!-- <br />  -->
-                                     <em>Seventeenth Midwest Speech and Language Days Symposium
-                                     (<strong>
-                                        <a href="https://ai.engin.umich.edu/news/midwest-speech-and-language-days/" style="text-decoration:none"><font color="#494e52">MSLD 2024</font></a></strong>, <b>
-                                        <font color="red">Oral</font>
-                                    </b>)</em>, <em>The First Workshop on AI Behavioral Science ( <strong><a href="https://ai-behavioral-science.github.io/2024" style="text-decoration:none"><font color="#494e52">AIBS@KDD 2024</font></a></strong>, <b><font color="red">Oral</font></b> )</em>
+                        <li data-selected="true">
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Can%20Large%20Language%20Model%20Agents%20Simulate%20Human%20Trust%20Behavior%3F.png" alt="Can Large Language Model Agents Simulate Human Trust Behavior? teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2402.04559" style="text-decoration:none"><font color="#494e52">Can Large Language Model Agents Simulate Human Trust Behavior?</font></a></strong>
+                                <br /> <a href="https://yitianlian.github.io/">Chengxing Xie</a>*, <strong>Canyu Chen</strong>*, <a href="https://feiran.io/">Feiran Jia</a>, <a href="https://ziyu-deep.github.io/">Ziyu Ye</a>,  <a href="https://scholar.google.com/citations?user=qALDmfcAAAAJ&hl=en">Shiyang Lai</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>, <a href="https://jindonggu.github.io/">Jindong Gu</a>, <a href="https://www.adelbibi.com/">Adel Bibi</a>, <a href="https://acbull.github.io/">Ziniu Hu</a>, <a href="http://jurgens.people.si.umich.edu/">David Jurgens</a>, <a href="https://macss.uchicago.edu/directory/James-Evans">James Evans</a>, <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a>, <a href="https://www.bernardghanem.com/">Bernard Ghanem</a>, <a href="https://ghli.org/">Guohao Li</a>.                                <br /><em><strong><font color="#494e52">NeurIPS 2024</font></strong></em> · <em><strong><a href="https://lass-workshop.github.io/" style="text-decoration:none"><font color="#494e52">LASS@CIKM 2025</font></a></strong>, <b><font color="red">Oral</font></b></em> · <em><strong><a href="https://ai.engin.umich.edu/news/midwest-speech-and-language-days/" style="text-decoration:none"><font color="#494e52">MSLD 2024</font></a></strong>, <b><font color="red">Oral</font></b></em> · <em><strong><a href="https://ai-behavioral-science.github.io/2024" style="text-decoration:none"><font color="#494e52">AIBS@KDD 2024</font></a></strong>, <b><font color="red">Oral</font></b></em>
                                 <br /> <a href="https://arxiv.org/abs/2402.04559">[arXiv]</a>
                                 <a href="https://agent-trust.camel-ai.org/">[project website]</a>
                                 <!-- <a href="https://drive.google.com/file/d/1mJp-J0aT__Pr7sQ4mmTXtQRPV9CZTlh2/view?usp=sharing">[slides]</a> -->
@@ -533,16 +654,22 @@
                                 <a href="https://drive.google.com/file/d/1JBMq4egr6AycGl-YmGFWalWBLfbcRbgi/view?usp=sharing">[Patronus AI]</a>
 
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
-                        <li>
-                            <p><strong><a href="https://arxiv.org/abs/2311.05656" style="text-decoration:none"><font color="#494e52">Combating Misinformation in the Age of LLMs: Opportunities and
+                        <li data-selected="true">
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Combating%20Misinformation%20in%20the%20Age%20of%20LLMs.png" alt="Combating Misinformation in the Age of LLMs: Opportunities and
+                                    Challenges teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2311.05656" style="text-decoration:none"><font color="#494e52">Combating Misinformation in the Age of LLMs: Opportunities and
                                     Challenges</font></a></strong>
                                 <br /><strong>Canyu Chen</strong>,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />
-                                Published in <strong><em>
-                                    <font color="#494e52">AI Magazine 2024 (Volume 45, Issue 3, Fall 2024)</font>, <a href="http://doi.org/10.1002/aaai.12188" style="text-decoration:none"><font color="red">Highlight Article</font></a></em></strong>.
+                                <br /><strong><em><font color="#494e52">AI Magazine 2024</font>, <a href="http://doi.org/10.1002/aaai.12188" style="text-decoration:none"><font color="red">Highlight Article</font></a></em></strong>
                                 <br /> 
                                 <a href="http://doi.org/10.1002/aaai.12188">[publication]</a>
                                 <a href="https://arxiv.org/abs/2311.05656">[arXiv]</a>
@@ -587,21 +714,21 @@
                                 <a href="https://drive.google.com/file/d/1W8cn0VF4Vskqgngws-t1DCVHlFBdpbNL/view?usp=sharing">[Guest Lecture for CS 517 Socially Responsible AI@UIC]</a>.
                                 <br />
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
                         
-                        <li>
-                            <p><strong><a href="https://arxiv.org/abs/2309.13788" style="text-decoration:none"><font color="#494e52">Can LLM-Generated Misinformation Be Detected?</font></a></strong>
+                        <li data-selected="true">
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Can%20LLM-Generated%20Misinformation%20Be%20Detected%3F.png" alt="Can LLM-Generated Misinformation Be Detected? teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2309.13788" style="text-decoration:none"><font color="#494e52">Can LLM-Generated Misinformation Be Detected?</font></a></strong>
                                 <br /><strong>Canyu Chen</strong>,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
                                 <!-- <br /> arXiv preprint. Sept. 2023. -->
-                                <br />Published in <em>Proceedings of The Twelfth International Conference on Learning Representations (<strong>
-                                        <font color="#494e52">ICLR 2024</font></strong> )</em>
-                                <br /> Also presented in workshop <em> <strong>
-                                        <a href="https://regulatableml.github.io/" style="text-decoration:none"><font color="#494e52">RegML@NeurIPS 2023</font></a></strong>, <b>
-                                        <font color="red">Oral</font>
-                                    </b> and <strong>
-                                        <a href="https://sites.google.com/view/icbinb-2023/papers?authuser=0" style="text-decoration:none"><font color="#494e52">ICBINB@NeurIPS 2023</font></a></strong>, <b>
-                                        <font color="red">spotlight</font></b></em>, and the symposium <em><b><a href="https://drive.google.com/file/d/1MHyJO777OlMVuEtNXe7JyXWP9COxUsx9/view?usp=sharing" style="text-decoration:none"><font color="#494e52">AGI Leap Summit 2024</font></a>, <font color="red">spotlight talk</font></b></em>.
+                                <br /><em><strong><font color="#494e52">ICLR 2024</font></strong></em> · <em><strong><a href="https://regulatableml.github.io/" style="text-decoration:none"><font color="#494e52">RegML@NeurIPS 2023</font></a></strong>, <b><font color="red">Oral</font></b></em> · <em><strong><a href="https://sites.google.com/view/icbinb-2023/papers?authuser=0" style="text-decoration:none"><font color="#494e52">ICBINB@NeurIPS 2023</font></a></strong>, <b><font color="red">Spotlight</font></b></em> · <em><strong><a href="https://drive.google.com/file/d/1MHyJO777OlMVuEtNXe7JyXWP9COxUsx9/view?usp=sharing" style="text-decoration:none"><font color="#494e52">AGI Leap Summit 2024</font></a></strong>, <b><font color="red">Spotlight Talk</font></b></em>
                                     <br /> 
                                     <a href="https://openreview.net/forum?id=ccxD4mtkTU">[publication]</a>
                                     <a href="https://arxiv.org/abs/2309.13788">[arXiv]</a>
@@ -651,80 +778,127 @@
                                 <a href="https://mp.weixin.qq.com/s/kxulG-96cJWv_5GyG4-2qw">[Tsinghua AI Time]</a>.
 
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2408.08946" style="text-decoration:none"><font color="#494e52">Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Authorship%20Attribution%20in%20the%20Era%20of%20LLMs.png" alt="Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2408.08946" style="text-decoration:none"><font color="#494e52">Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges</font></a></strong>
                                 <br /> <a href="https://baixianghuang.github.io/">Baixiang Huang</a>, <strong>Canyu Chen</strong>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />Published in <strong><em><font color="#494e52">SIGKDD Explorations 2024</font></em></strong>
+                                <br /><strong><em><font color="#494e52">SIGKDD Explorations 2024</font></em></strong>
                                 <br /> <a href="https://arxiv.org/abs/2408.08946">[arXiv]</a>
                                 <a href="https://llm-authorship.github.io/">[project website]</a>
                                 <a href="https://github.com/llm-authorship/survey">[Paper list on GitHub]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2403.08213'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2403.08213" style="text-decoration:none"><font color="#494e52">Can Large Language Models Identify Authorship?</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Can%20Large%20Language%20Models%20Identify%20Authorship%3F.png" alt="Can Large Language Models Identify Authorship? teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2403.08213" style="text-decoration:none"><font color="#494e52">Can Large Language Models Identify Authorship?</font></a></strong>
                                 <br /> <a href="https://baixianghuang.github.io/">Baixiang Huang</a>, <strong>Canyu Chen</strong>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br /> Published in <em>Proceedings of Findings of The 2024 Conference on Empirical Methods in Natural Language Processing ( <strong><font color="#494e52">EMNLP 2024</font></strong>, Findings Long Paper )</em>
+                                <br /><em><strong><font color="#494e52">EMNLP 2024</font></strong>, Findings</em>
                                 <br /> <a href="https://arxiv.org/abs/2403.08213">[arXiv]</a>
                                 <a href="https://llm-authorship.github.io/">[project website]</a>
                                 <a href="https://github.com/baixianghuang/authorship-llm">[code]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2403.08213'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2305.10668" style="text-decoration:none"><font color="#494e52">MetaGAD: Learning to Meta Transfer for Few-shot Graph Anomaly Detection.</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/MetaGAD.png" alt="MetaGAD: Learning to Meta Transfer for Few-shot Graph Anomaly Detection. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2305.10668" style="text-decoration:none"><font color="#494e52">MetaGAD: Learning to Meta Transfer for Few-shot Graph Anomaly Detection.</font></a></strong>
                                 <br /><a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>, <a
                                     href="https://kaize0409.github.io/">Kaize Ding</a>, <strong>Canyu Chen</strong>,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br /> Published in <em>Proceedings of The 11th IEEE International Conference on Data Science and Advanced Analytics</em> (<b><i>DSAA 2024</i></b>)
+                                <br /><em><strong><font color="#494e52">DSAA 2024</font></strong></em>
                                 <br /> <a href="https://arxiv.org/abs/2305.10668">[arXiv]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2305.10668'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2407.21264" style="text-decoration:none"><font color="#494e52">Model Attribution in Machine-Generated Disinformation: A Domain Generalization Approach with Supervised Contrastive Learning</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Model%20Attribution%20in%20LLM-Generated%20Disinformation.png" alt="Model Attribution in Machine-Generated Disinformation: A Domain Generalization Approach with Supervised Contrastive Learning teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2407.21264" style="text-decoration:none"><font color="#494e52">Model Attribution in Machine-Generated Disinformation: A Domain Generalization Approach with Supervised Contrastive Learning</font></a></strong>
                                 <br />Alimohammad Beigi, Zhen Tan, Nivedh Mudiam, <strong>Canyu Chen</strong>,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>, <a href="https://www.public.asu.edu/~huanliu/">Huan Liu</a>.
-                                <br /> Published in <em>Proceedings of The 11th IEEE International Conference on Data Science and Advanced Analytics</em> (<b><i>DSAA 2024</i></b>)
+                                <br /><em><strong><font color="#494e52">DSAA 2024</font></strong></em>
                                 <br /> <a href="https://arxiv.org/abs/2407.21264">[arXiv]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2305.10668'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2410.01089" style="text-decoration:none"><font color="#494e52">FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/FMBench.png" alt="FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2410.01089" style="text-decoration:none"><font color="#494e52">FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks</font></a></strong>
                                 <br /><a href="https://openreview.net/profile?id=~Peiran_Wu2">Peiran Wu</a>, <a href="https://scholar.google.com/citations?user=HED_458AAAAJ">Che Liu</a>, <strong>Canyu Chen</strong>, <a href="https://lijunrio.github.io/junli/">Jun Li</a>, <a href="https://cosmin-bercea.com/">Cosmin I. Bercea</a>, <a href="https://profiles.imperial.ac.uk/r.arcucci">Rossella Arcucci</a>
                                 <br /> arXiv preprint. Oct. 2024.
                                 <br /> <a href="https://arxiv.org/abs/2410.01089">[arXiv]</a>
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2410.10398" style="text-decoration:none"><font color="#494e52">FairMindSim: Alignment of Behavior, Emotion, and Belief in Humans and LLM Agents Amid Ethical Dilemmas</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/FairMindSim.png" alt="FairMindSim: Alignment of Behavior, Emotion, and Belief in Humans and LLM Agents Amid Ethical Dilemmas teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2410.10398" style="text-decoration:none"><font color="#494e52">FairMindSim: Alignment of Behavior, Emotion, and Belief in Humans and LLM Agents Amid Ethical Dilemmas</font></a></strong>
                                 <br />Yu Lei, Hao Liu, <a href="https://yitianlian.github.io/">Chengxing Xie</a>, Songjia Liu, Zhiyu Yin, <strong>Canyu Chen</strong>, <a href="https://ghli.org/">Guohao Li</a>, <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a>, <a href="https://scholar.google.com/citations?user=ZMIAsdwAAAAJ&hl=en">Zhen Wu</a>
                                 <br /> arXiv preprint. Oct. 2024.
                                 <br /> <a href="https://arxiv.org/abs/2410.10398">[arXiv]</a>
                                        <a href="https://github.com/leiyu0210/FairMindSim">[code]</a>
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2404.12241" style="text-decoration:none"><font color="#494e52">Introducing v0.5 of the AI Safety Benchmark from MLCommons</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser"></div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2404.12241" style="text-decoration:none"><font color="#494e52">Introducing v0.5 of the AI Safety Benchmark from MLCommons</font></a></strong>
                                 <br /> MLCommons AI Safety Working Group
                                 <br /> arXiv preprint. Apr. 2024.
                                 <br /> <a href="https://arxiv.org/abs/2404.12241">[arXiv]</a>
                                 <a href="https://mlcommons.org/2024/04/mlc-aisafety-v0-5-poc/">[official blog]</a>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iKfWNy0AAAAJ&citation_for_view=iKfWNy0AAAAJ:dhFuZR0502QC" aria-label="Google Scholar link" role="button" rel="external nofollow noopener" target="_blank"> 
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iKfWNy0AAAAJ&citation_for_view=iKfWNy0AAAAJ:dhFuZR0502QC" aria-label="Google Scholar link" role="button" rel="external nofollow noopener" target="_blank">
                                     <img src="https://img.shields.io/badge/scholar-42-4285F4?logo=googlescholar&amp;labelColor=beige" alt="Google Scholar citations"> </a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2404.12241'></span> -->
                                 <br /> <strong>
                                     <font color="#3b5af2">Media Coverage</font>
-                                </strong> : 
+                                </strong> :
                                 <a href="https://spectrum.ieee.org/ai-safety-benchmark">[IEEE Spectrum]</a>
                                 <a href="https://huggingface.co/papers/date/2024-04-19">[AK Daily Papers]</a>
                                 <a href="https://www.marktechpost.com/2024/04/20/this-ai-paper-from-mlcommons-ai-safety-working-group-introduces-v0-5-of-the-groundbreaking-ai-safety-benchmark/">[Marktechpost]</a>
@@ -736,6 +910,8 @@
                                 <a href="https://siliconangle.com/2024/04/16/mlcommons-announces-first-benchmark-assessing-ai-safety/">[SiliconANGLE]</a>
                                 <a href="https://goatstack.ai/topics/introducing-v0-5-of-the-ai-safety-benchmark-from-mlcommons-vhqogz">[GoatStack.ai]</a>.
                             </p>
+                                </div>
+                            </div>
                         </li>
 
 
@@ -744,16 +920,17 @@
                     <h3 id="2023">2023</h3>
                     <ul>
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2205.09229" style="text-decoration:none"><font color="#494e52">PromptDA: Label-guided Data Augmentation for Prompt-based Few-shot
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/PromptDA.png" alt="PromptDA: Label-guided Data Augmentation for Prompt-based Few-shot
+                                    Learners. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2205.09229" style="text-decoration:none"><font color="#494e52">PromptDA: Label-guided Data Augmentation for Prompt-based Few-shot
                                     Learners.</font></a></strong>
                                 <br /><strong>Canyu Chen</strong>,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />Published in  <em>Proceedings of the 17th Conference of the European Chapter of the Association
-                                    for Computational Linguistics (<strong>
-                                        <font color="#494e52">EACL 2023</font></strong>, Main Conference Long Paper )</em>
-                                <br />Also presented in workshop <em>  <strong>
-                                    <a href="https://neurips2022-enlsp.github.io/" style="text-decoration:none"><font color="#494e52">ENLSP@NeurIPS 2022</font></a></strong>, <b>
-                                        <font color="red">Oral (spotlight)</font></b></em>.
+                                <br /><em><strong><font color="#494e52">EACL 2023</font></strong></em> · <em><strong><a href="https://neurips2022-enlsp.github.io/" style="text-decoration:none"><font color="#494e52">ENLSP@NeurIPS 2022</font></a></strong>, <b><font color="red">Oral (Spotlight)</font></b></em>
                                 <br />
                                 <a href="https://arxiv.org/abs/2205.09229">[arXiv]</a>
                                 <a href="https://github.com/canyuchen/PromptDA">[code]</a>
@@ -767,30 +944,41 @@
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-doi='10.18653/v1/2023.eacl-main.41'></span> -->
                                 <!-- <a href="https://drive.google.com/file/d/1kh5kpSQ1I-06cYagcAr_wjYljMfZsqM_/view?usp=share_link">[workshop version]</a> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2206.03656" style="text-decoration:none"><font color="#494e52">Fair Classification via Domain Adaptation: A Dual Adversarial Learning
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Fair%20Classification%20via%20Domain%20Adaptation.png" alt="Fair Classification via Domain Adaptation: A Dual Adversarial Learning
+                                    Approach. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2206.03656" style="text-decoration:none"><font color="#494e52">Fair Classification via Domain Adaptation: A Dual Adversarial Learning
                                     Approach.</font></a></strong><br />
                                 <a href="https://yueqingliang1.github.io/">Yueqing Liang</a>, <strong>Canyu
                                     Chen</strong>, <a href="https://www.linkedin.com/in/tian-tian-3b0a9bb0/">Tian
                                     Tian</a>, <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />Published in  <strong><em>
-                                        <font color="#494e52">Frontiers in Big Data 2023</font>
-                                    </em></strong>.<br />
+                                <br /><strong><em><font color="#494e52">Frontiers in Big Data, 2023</font></em></strong><br />
                                 <a href="https://www.frontiersin.org/articles/10.3389/fdata.2022.1049565/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Big_Data&id=1049565">[publication]</a>
                                 <a href="https://arxiv.org/abs/2206.03656">[arXiv]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-doi='10.3389/fdata.2022.1049565'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2302.07363" style="text-decoration:none"><font color="#494e52">Attacking Fake News Detectors via Manipulating News Social Engagement.</font></a></strong>
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Attacking%20Fake%20News%20Detectors%20via%20Manipulating.png" alt="Attacking Fake News Detectors via Manipulating News Social Engagement. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2302.07363" style="text-decoration:none"><font color="#494e52">Attacking Fake News Detectors via Manipulating News Social Engagement.</font></a></strong>
                                 <br /><a href="https://brucehrwang.com/academic/home">Haoran Wang</a>, <a
                                     href="https://brucehrwang.com/academic/home">Yingtong Dou</a>, <strong>Canyu
                                     Chen</strong>, <a href="https://lichao-sun.github.io/">Lichao Sun</a>, Philip S. Yu,
                                 <a href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />Published in  <em>Proceedings of The ACM Web Conference 2023 (<strong>
-                                        <font color="#494e52">WWW 2023</font>
-                                    </strong>).</em>
+                                <br /><em><strong><font color="#494e52">WWW 2023</font></strong></em>
                                     <br />
                                     <a href="https://arxiv.org/abs/2302.07363">[arXiv]</a>
                                     <a href="https://github.com/hwang219/AttackFakeNews">[code]</a>
@@ -803,7 +991,9 @@
                                     href="https://montrealethics.ai/attacking-fake-news-detectors-via-manipulating-news-social-engagement/">[Montreal
                                     AI Ethics Institute]</a>.</em>
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
                         <!-- <li>
                             <p><strong>PyGOD: A Python Library for Graph Outlier Detection.</strong><br />
                                 Kay Liu, Yingtong Dou, Yue Zhao, Xueying Ding, Xiyang Hu, Ruitong Zhang, Kaize Ding,
@@ -822,23 +1012,36 @@
 
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2211.05289" style="text-decoration:none"><font color="#494e52">Combating Health Misinformation in Social Media: Characterization, Detection,
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Combating%20Health%20Misinformation%20in%20Social%20Media.png" alt="Combating Health Misinformation in Social Media: Characterization, Detection,
+                                    Intervention, and Open Issues. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2211.05289" style="text-decoration:none"><font color="#494e52">Combating Health Misinformation in Social Media: Characterization, Detection,
                                     Intervention, and Open Issues.</font></a></strong><br />
                                 <strong>Canyu Chen*</strong>, <a href="https://brucehrwang.com/academic/home">Haoran
                                     Wang</a>*, <a href="https://understandgreen.com/">Matthew Shapiro</a>, <a
                                     href="https://vivo.weill.cornell.edu/display/cwid-yux4008">Yunyu Xiao</a>, <a
                                     href="https://wcm-wanglab.github.io/">Fei Wang</a>, <a
-                                    href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>. (*equal contributions)
-                                <br /> arXiv preprint. Nov. 2022.
+                                    href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.                                <br /> arXiv preprint. Nov. 2022.
                                 <br /> <a href="https://arxiv.org/abs/2211.05289">[arXiv]</a>
                                 <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iKfWNy0AAAAJ&sortby=pubdate&citation_for_view=iKfWNy0AAAAJ:roLk4NBRz8UC" aria-label="Google Scholar link" role="button" rel="external nofollow noopener" target="_blank"> 
                                     <img src="https://img.shields.io/badge/scholar-37-4285F4?logo=googlescholar&amp;labelColor=beige" alt="Google Scholar citations"> </a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2211.05289'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2207.08336" style="text-decoration:none"><font color="#494e52">When Fairness Meets Privacy: Fair Classification with Semi-Private Sensitive
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/When%20Fairness%20Meets%20Privacy.png" alt="When Fairness Meets Privacy: Fair Classification with Semi-Private Sensitive
+                                    Attributes. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2207.08336" style="text-decoration:none"><font color="#494e52">When Fairness Meets Privacy: Fair Classification with Semi-Private Sensitive
                                     Attributes.</font></a></strong><br />
                                 <strong>Canyu Chen</strong>, <a href="https://yueqingliang1.github.io/">Yueqing
                                     Liang</a>, <a href="https://xiongxiaoxu.github.io/">Xiongxiao Xu</a>, <a
@@ -847,8 +1050,7 @@
                                 <a href="https://scholar.google.com/citations?user=9rHwD8wAAAAJ&hl=en">Ali Payani</a>,
                                 <a href="https://yhongcs.github.io/index.html">Yuan Hong</a>, <a
                                     href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>.
-                                <br />Presented in  workshop<em>  <strong><a href="https://tsrml2022.github.io/" style="text-decoration:none"><font color="#494e52">TSRML@NeurIPS 2022</font></a>
-                                    </strong> and <strong><a href="https://www.afciworkshop.org/afcp2022" style="text-decoration:none"><font color="#494e52">AFCP@NeurIPS 2022</font></a></strong></em>.
+                                <br /><em><strong><a href="https://tsrml2022.github.io/" style="text-decoration:none"><font color="#494e52">TSRML@NeurIPS 2022</font></a></strong></em> · <em><strong><a href="https://www.afciworkshop.org/afcp2022" style="text-decoration:none"><font color="#494e52">AFCP@NeurIPS 2022</font></a></strong></em>
                                 <br /> <a href="https://arxiv.org/abs/2207.08336">[arXiv]</a>
                                 <a
                                     href="https://recorder-v3.slideslive.com/?share=78276&s=d4483c12-ab9f-42ec-953d-da838d9cd163">[Video]</a>
@@ -860,7 +1062,10 @@
                                         <img src="https://img.shields.io/badge/scholar-14-4285F4?logo=googlescholar&amp;labelColor=beige" alt="Google Scholar citations"> </a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2207.08336'></span> -->
                                 <!-- <a href="https://drive.google.com/file/d/1Kuv07fWHQ5jgAqL60CXIKXds0f3bTV0T/view?usp=share_link">[TSRML version]</a>  -->
-                                <!-- <a href="https://drive.google.com/file/d/1XGJA5GR-q07d3bsQWZJV7uVpqAa_86mM/view?usp=share_link">[AFCP version]</a></p> -->
+                                <!-- <a href="https://drive.google.com/file/d/1XGJA5GR-q07d3bsQWZJV7uVpqAa_86mM/view?usp=share_link">[AFCP version]</a></p>
+                                </div>
+                            </div>
+-->
                                 <br /> <strong>
                                     <font color="#3b5af2">Media Coverage</font>
                                 </strong> : <a
@@ -870,7 +1075,12 @@
 
 
                         <li>
-                            <p><strong><a href="https://www.mdpi.com/1999-4893/15/9/299" style="text-decoration:none"><font color="#494e52">Artificial Intelligence Algorithms for Treatment of Diabetes.</font></a></strong><br /> <a
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/Artificial%20Intelligence%20Algorithms%20for%20Treatment%20of%20Diabetes.png" alt="Artificial Intelligence Algorithms for Treatment of Diabetes. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://www.mdpi.com/1999-4893/15/9/299" style="text-decoration:none"><font color="#494e52">Artificial Intelligence Algorithms for Treatment of Diabetes.</font></a></strong><br /> <a
                                     href="https://scholar.google.com/citations?user=F3OZmPoAAAAJ&amp;hl=en">Mudassir M.
                                     Rashid</a>, <a
                                     href="https://scholar.google.com/citations?user=njl6K6VfGlAC&amp;hl=en">Mohammad
@@ -878,22 +1088,26 @@
                                     href="https://yueqingliang1.github.io/">Yueqing Liang</a>, <a
                                     href="https://www.cs.emory.edu/~kshu5/">Kai Shu</a>, <a
                                     href="https://sites.google.com/iit.edu/ali-cinar">Ali Cinar</a>.<br />
-                                    Published in <strong><em>
-                                        <font color="#494e52">Algorithms 2022</font>
-                                    </em></strong>.<br /> <a href="https://www.mdpi.com/1999-4893/15/9/299">[Paper]</a>
+                                    <strong><em><font color="#494e52">Algorithms 2022</font></em></strong><br /> <a href="https://www.mdpi.com/1999-4893/15/9/299">[Paper]</a>
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-doi='10.3390/a15090299'></span> -->
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                         <li>
-                            <p><strong><a href="https://arxiv.org/abs/2206.10071" style="text-decoration:none"><font color="#494e52">BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed
+                            <div class="pub-row">
+                                <div class="pub-teaser">
+                                    <img loading="lazy" src="images/teasers/BOND.png" alt="BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed
+                                    Graphs. teaser">
+                                </div>
+                                <div class="pub-text">
+                                    <p><strong><a href="https://arxiv.org/abs/2206.10071" style="text-decoration:none"><font color="#494e52">BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed
                                     Graphs.</font></a></strong><br />
                                 Kay Liu, Yingtong Dou, Yue Zhao, Xueying Ding, Xiyang Hu, Ruitong Zhang, Kaize Ding,
                                 <strong>Canyu Chen</strong>, Hao Peng, Kai Shu, Lichao Sun, Jundong Li, George H. Chen,
                                 Zhihao Jia, Philip S. Yu.
-                                <br />Published in  <em>Proceedings of the 36th Conference on Neural Information Processing Systems (<strong>
-                                        <font color="#494e52">NeurIPS 2022</font>
-                                    </strong>), Datasets and Benchmarks Track</em>.
+                                <br /><em><strong><font color="#494e52">NeurIPS 2022</font></strong>, Datasets and Benchmarks Track</em>
                                 <br /> 
                                 <a href="https://arxiv.org/abs/2206.10071">[arXiv]</a>
                                 <a href="https://github.com/pygod-team/pygod">[code]</a>
@@ -902,7 +1116,9 @@
                                 <!-- <span data-badge-type="2" class='altmetric-embed' data-link-target="_blank" data-arxiv-id='2206.10071'></span> -->
 
                             </p>
-                        </li>
+                                </div>
+                            </div>
+</li>
 
                     </ul>
                     <h2 id="talks">Invited Talks</h2>
@@ -1046,6 +1262,77 @@ Google Sites (new) -->
                     referrerPolicy="no-referrer-when-downgrade"></a></div>
     </noscript>
     <!-- End of Statcounter Code -->
+
+    <script>
+    (function() {
+        var selBtn = document.getElementById('pub-show-selected');
+        var allBtn = document.getElementById('pub-show-all');
+        var pubH2 = document.getElementById('publications');
+
+        function getPublicationElements() {
+            var elements = [];
+            var el = pubH2.nextElementSibling;
+            var talksH2 = document.getElementById('talks');
+            while (el && el !== talksH2) {
+                elements.push(el);
+                el = el.nextElementSibling;
+            }
+            return elements;
+        }
+
+        function showSelected() {
+            selBtn.style.fontWeight = 'bold';
+            selBtn.style.color = '#52adc8';
+            allBtn.style.fontWeight = 'normal';
+            allBtn.style.color = '#999';
+
+            var elements = getPublicationElements();
+            for (var i = 0; i < elements.length; i++) {
+                var el = elements[i];
+                if (el.tagName === 'H3') {
+                    el.style.display = 'none';
+                } else if (el.tagName === 'UL') {
+                    var lis = el.querySelectorAll(':scope > li');
+                    var hasVisible = false;
+                    for (var j = 0; j < lis.length; j++) {
+                        if (lis[j].getAttribute('data-selected') === 'true') {
+                            lis[j].style.display = '';
+                            hasVisible = true;
+                        } else {
+                            lis[j].style.display = 'none';
+                        }
+                    }
+                    el.style.display = hasVisible ? '' : 'none';
+                }
+            }
+        }
+
+        function showAll() {
+            allBtn.style.fontWeight = 'bold';
+            allBtn.style.color = '#52adc8';
+            selBtn.style.fontWeight = 'normal';
+            selBtn.style.color = '#999';
+
+            var elements = getPublicationElements();
+            for (var i = 0; i < elements.length; i++) {
+                var el = elements[i];
+                el.style.display = '';
+                if (el.tagName === 'UL') {
+                    var lis = el.querySelectorAll(':scope > li');
+                    for (var j = 0; j < lis.length; j++) {
+                        lis[j].style.display = '';
+                    }
+                }
+            }
+        }
+
+        selBtn.addEventListener('click', function(e) { e.preventDefault(); showSelected(); });
+        allBtn.addEventListener('click', function(e) { e.preventDefault(); showAll(); });
+
+        // Default: show selected
+        showSelected();
+    })();
+    </script>
 </body>
 
 </html>
